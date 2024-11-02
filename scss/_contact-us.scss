@@ -1,0 +1,51 @@
+@import './variables';
+
+.contactus{
+    font-family: $Font-Family;
+    .head {
+        h2 {
+            font: {
+                size: $Header-FontSize;
+                weight: $Header-FontWeight;
+            }
+            color: $Header-Color;
+        }
+
+        p {
+            font: {
+                size: $P-FontSize;
+                weight: $P-FontWeight;
+            }
+            color: $P-Color;
+        }
+    }
+
+    .content{
+        .left{
+            .card{
+                i {
+                    padding-top: 2rem;
+                    font-size: 3rem;
+                    color: $Main-Color;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+        
+        .right{
+            border-radius: 10px;
+            .btn{
+                background-color: $Main-Color;
+                color: #fff;
+                padding: 0.5rem 2rem;
+                border-radius: 5px;
+                border: none;
+                cursor: pointer;
+                &:hover{
+                    background-color: darken($Main-Color, 10%);
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

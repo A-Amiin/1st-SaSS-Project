@@ -1,0 +1,71 @@
+@import './variables';
+
+.services{
+    .head {
+        h2 {
+            font: {
+                family: $Font-Family;
+                size: $Header-FontSize;
+                weight: $Header-FontWeight;
+            }
+            color: $Header-Color;
+        }
+
+        p {
+            font: {
+                family: $Font-Family;
+                size: $P-FontSize;
+                weight: $P-FontWeight;
+            }
+            color: $P-Color;
+        }
+    }
+    .row {
+        .card {
+            background-color: $Secondary-Color;
+            border: none;
+            border-radius: 0px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        
+            i {
+                padding-top: 2rem;
+                font-size: 3rem;
+                color: $Main-Color;
+                margin-bottom: 1rem;
+            }
+            
+            .card-body {
+                color: $Secondary-Color;
+                .card-title {
+                    font-family: $Font-Family;
+                    font-size: $Main-FontSize;
+                    font-weight: $Main-FontWeight;
+                    color: $Header-Color;
+                    margin-bottom: 0.5rem;
+                }
+                .card-text {
+                    font-family: $Font-Family;
+                    font-size: $P-FontSize;
+                    font-weight: $P-FontWeight;
+                    color: $P-Color;
+                }
+            }
+        
+            &:hover {
+                background-color: $Main-Color;
+                transform: translateY(-5px);
+                i{
+                    color: $Secondary-Color;
+                }
+                .card-body {
+                    color: $Secondary-Color;
+                    .card-title,
+                    .card-text {
+                        color: $Secondary-Color;
+                    }
+                }
+            }
+        }
+    }
+}

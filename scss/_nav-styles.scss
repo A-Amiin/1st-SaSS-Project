@@ -1,0 +1,26 @@
+@import './variables';
+
+nav{
+    .container{
+        h1{
+            color: $Header-Color;
+            font-size:$Header-FontSize ;
+            font-weight: Header-FontWeight;
+        }
+    }
+    .collapse{
+        ul{
+            li{
+                a{
+                    font-family: $Font-Family;
+                    font-size: $P-FontSize;
+                    color: $P-Color;
+                    &:hover{
+                        background-color: $Main-Color;
+                        color: $Secondary-Color;
+                    }
+                }
+            }
+        }
+    }
+}

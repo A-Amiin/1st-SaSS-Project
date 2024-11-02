@@ -1,0 +1,82 @@
+@import './variables';
+
+.team{
+    .head {
+        h2 {
+            font: {
+                family: $Font-Family;
+                size: $Header-FontSize;
+                weight: $Header-FontWeight;
+            }
+            color: $Header-Color;
+        }
+
+        p {
+            font: {
+                family: $Font-Family;
+                size: $P-FontSize;
+                weight: $P-FontWeight;
+            }
+            color: $P-Color;
+        }
+    }
+
+    .position-relative {
+        position: relative;
+        overflow: hidden;
+
+        img {
+            transition: filter 0.3s;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: $Secondary-Color;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+
+            .name {
+                font-family: $Font-Family;
+                font-size: 1.2rem;
+                font-weight: $Main-FontWeight;
+            }
+
+            .title {
+                font-family: $Font-Family;
+                font-size: 1rem;
+                font-weight: $P-FontWeight;
+            }
+
+            .social-icons {
+                margin-top: 10px;
+
+                .icon {
+                    color: $Secondary-Color;
+                    margin: 0 5px;
+                    font-size: 1.5rem;
+
+                    &:hover {
+                        color: $Main-Color;
+                    }
+                }
+            }
+        }
+
+        &:hover .overlay {
+            opacity: 1;
+        }
+
+        &:hover img {
+            filter: brightness(70%);
+    }
+}
+}

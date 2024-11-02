@@ -1,0 +1,44 @@
+@import './variables';
+
+.QA{
+    .left{
+        h2 {
+            font: {
+                family: $Font-Family;
+                size: $Header-FontSize;
+                weight: $Header-FontWeight;
+            }
+            color: $Header-Color;
+        }
+
+        p {
+            font: {
+                family: $Font-Family;
+                size: $P-FontSize;
+                weight: $P-FontWeight;
+            }
+            color: $P-Color;
+        }
+    }
+    .right{
+        .accordion-button{
+            font: {
+                family: $Font-Family;
+                size: 1.2rem;
+                weight: $P-FontWeight;
+            }
+            color: $Header-Color;
+            background-color: $Secondary-Color;
+            &:focus,&:first-child{
+                color: $Main-Color;
+            }
+        }
+        .accordion-body{
+            font: {
+                family: $Font-Family;
+                size: $P-FontSize;
+                weight: $P-FontWeight;
+            }
+        }
+    }
+}

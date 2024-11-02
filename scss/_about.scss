@@ -1,0 +1,80 @@
+@import './variables';
+
+.About {
+    // Heading
+    .head {
+        h2 {
+            font: {
+                family: $Font-Family;
+                size: $Header-FontSize;
+                weight: $Header-FontWeight;
+            }
+            color: $Header-Color;
+        }
+
+        p {
+            font: {
+                family: $Font-Family;
+                size: $P-FontSize;
+                weight: $P-FontWeight;
+            }
+            color: $P-Color;
+        }
+    }
+
+    // Body
+    .body {
+        .txet {
+            h3 {
+                font: {
+                    family: $Font-Family;
+                    size: $Header-FontSize;
+                    weight: $Header-FontWeight;
+                }
+                color: $Header-Color;
+            }
+
+            p {
+                font: {
+                    family: $Font-Family;
+                    size: $P-FontSize;
+                    weight: $P-FontWeight;
+                }
+                color: $P-Color;
+            }
+
+            ul {
+                list-style: none;
+                padding-left: 2rem;
+                li {
+                    position: relative;
+                    padding: {
+                        left: 2rem;
+                    }
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: 0.3rem;
+                        width: 1rem;
+                        height: 1rem;
+                        background-image: url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/check-circle.svg");
+                        background-size: cover;
+                    }
+                }
+            }
+
+            .btn {
+                font-weight: $Main-FontWeight;
+                background-color: $Main-Color;
+                color: $Secondary-Color;
+                align-items: flex-start;
+                width: 35%;
+                &:hover{
+                    background-color: darken($Main-Color, 10%);
+                    color: $Secondary-Color;
+                }
+            }
+        }
+    }
+}
